@@ -18,7 +18,7 @@ BEGIN
 				INSERT IGNORE INTO `komodoDB`.`currency_pairs` (`symbol1`, `symbol2`, `currency_id_1`, `currency_id_2`) VALUES (
 					(SELECT `symbol` FROM `komodoDB`.`currency` WHERE `currency_id` = @i), 
 					(SELECT `symbol` FROM `komodoDB`.`currency` WHERE `currency_id` = @j), 
-		                        @i, @j
+                    			@i, @j
 					);
 			END IF;
 			SET @j := @j + 1;
