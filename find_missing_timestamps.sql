@@ -9,7 +9,7 @@ CREATE PROCEDURE makeSequence()
 BEGIN   
 	DROP TABLE IF EXISTS `komodoDB`.`timestamps`;
 	CREATE TEMPORARY TABLE `komodoDB`.`timestamps` (`time` INT NOT NULL);
-    SET @i := @min;
+        SET @i := @min;
 	WHILE @i < @max DO
 		INSERT INTO `komodoDB`.`timestamps` (`time`) VALUE (@i);
         SET @i := @i + 60;
